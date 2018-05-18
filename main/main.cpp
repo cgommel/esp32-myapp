@@ -32,24 +32,25 @@ void app_main(void)
 	wifi_config_t sta_config = { };
 
 
-	strcpy((char*)sta_config.sta.ssid,"cntx-guest");
-	strcpy((char*)sta_config.sta.password,"willkommen");
+	strcpy((char*)sta_config.sta.ssid,"ssid");
+	strcpy((char*)sta_config.sta.password,"password");
 
 
 
 	sta_config.sta.bssid_set = false;
 
-
-
     uart_config_t uart_config={
 		.baud_rate=115200,
 	    .data_bits= UART_DATA_8_BITS,
-
 	};
 
     ESP_ERROR_CHECK( esp_wifi_set_config(WIFI_IF_STA, &sta_config) );
     ESP_ERROR_CHECK( esp_wifi_start() );
     ESP_ERROR_CHECK( esp_wifi_connect() );
+
+    wifi_mode_t wm;
+	esp_wifi_get_mode(&wm);
+	int i= w
 
     gpio_set_direction(GPIO_NUM_4, GPIO_MODE_OUTPUT);
     int level = 0;

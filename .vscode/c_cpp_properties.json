@@ -1,0 +1,50 @@
+{
+    "configurations": [
+        {
+            "name": "ESP32",
+            "defines": [
+                "ESP_PLATFORM",
+                "_HAVE_STDC",
+                "CONFIG_WIFI_ENABLED",
+                "UBI_PC"
+            ],
+            "includePath": [
+                "${workspaceRoot}/build/include",
+                "C:/msys32/usr/include",
+                "C:/msys32/usr/lib/gcc/i686-pc-msys/6.3.0/include",
+                "C:/msys32/usr/lib/gcc/i686-pc-msys/6.3.0/include/c++",
+                "C:/msys32/usr/lib/gcc/i686-pc-msys/6.3.0/include/c++/i686-pc-msys",
+                "${workspaceRoot}/../esp-idf/components/newlib/include",
+                "${workspaceRoot}/../esp-idf/components/lwip/include/lwip/",
+                "${workspaceRoot}/../esp-idf/components",
+				"${workspaceRoot}/../esp-idf/components/soc/include",
+				"${workspaceRoot}/../esp-idf/components/freertos/include/",
+				"${workspaceRoot}/../esp-idf/components/heap/include/",
+                "${workspaceRoot}/../esp-idf/components/bt/include",
+                "${workspaceRoot}/../esp-idf/components/driver/include",
+                "${workspaceRoot}/../esp-idf/components/lwip/include/lwip/priv",
+                "${workspaceRoot}/../esp-idf/components/bt/bluedroid/api/include",
+                "${workspaceRoot}/../esp-idf/components/esp32/include",
+                "${workspaceRoot}/../esp-idf/components/soc/esp32/include",
+                "${workspaceRoot}/../esp-idf/components/log/include",
+                "${workspaceRoot}/../esp-idf/components/esp32/include/rom",
+                "${workspaceRoot}/../esp-idf/components/tcpip_adapter/include",
+                "${workspaceRoot}/../esp-idf/components/lwip/include/lwip/port",
+                "${workspaceRoot}/../esp-idf/components/nvs_flash/include"
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": "${workspaceRoot}/build/Intellisense",
+                "path": [
+                    "${workspaceRoot}",
+					"${workspaceRoot}/../esp-idf/components",
+                ]
+            },
+            "intelliSenseMode": "clang-x64",
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}

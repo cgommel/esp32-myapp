@@ -25,7 +25,8 @@
 		"tuple": "cpp",
 		"xstring": "cpp",
 		"iosfwd": "cpp",
-		"xlocale": "cpp"
+		"xlocale": "cpp",
+		"uart.h": "c"
 	},
 	"files.exclude": {
 		"**/.git": true,

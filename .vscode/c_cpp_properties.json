@@ -37,7 +37,7 @@
                 "databaseFilename": "${workspaceRoot}/build/Intellisense",
                 "path": [
                     "${workspaceRoot}",
-					"${workspaceRoot}/../esp-idf/components",
+					"${workspaceRoot}/../esp-idf/components"
                 ]
             },
             "intelliSenseMode": "clang-x64",

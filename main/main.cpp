@@ -6,6 +6,11 @@
 #include "nvs_flash.h"
 #include "driver/gpio.h"
 #include "driver/uart.h"
+#include <string.h>
+
+extern "C" {
+	void app_main(void);
+}
 
 
 esp_err_t event_handler(void *ctx, system_event_t *event)
@@ -23,13 +28,18 @@ void app_main(void)
     ESP_ERROR_CHECK( esp_wifi_init(&cfg) );
     ESP_ERROR_CHECK( esp_wifi_set_storage(WIFI_STORAGE_RAM) );
     ESP_ERROR_CHECK( esp_wifi_set_mode(WIFI_MODE_STA) );
-    wifi_config_t sta_config = {
-        .sta = {
-            .ssid = "cntx-guest",
-            .password = "willkommen",
-            .bssid_set = false
-        }
-    };
+
+	wifi_config_t sta_config = { };
+
+
+	strcpy((char*)sta_config.sta.ssid,"cntx-guest");
+	strcpy((char*)sta_config.sta.password,"willkommen");
+
+
+
+	sta_config.sta.bssid_set = false;
+
+
 
     uart_config_t uart_config={
 		.baud_rate=115200,
